@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sustainability Projects</title>
+
+  <!-- Arquivo CSS principal (style.css) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fontes Google: Pacifico (títulos) e Roboto (textos) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap"
+  />
+
+  <!-- CSS extra para navbar fixa, botão de idioma, rodapé e variação de fontes -->
+  <style>
+    /* Fontes e tamanhos gerais */
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Navbar fixa no topo */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background-color: #2e7d32;
+      padding-bottom: 1em;
+    }
+    main {
+      padding-top: 160px; /* espaçamento para não ficar atrás do header fixo */
+    }
+
+    /* Título principal no topo (navbar) */
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin-top: 0.5em;
+    }
+
+    /* Botões do navbar */
+    nav button {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      background: white;
+      border: 2px solid #2e7d32;
+      color: #2e7d32;
+      padding: 10px 15px;
+      margin: 5px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav button:hover {
+      background: #2e7d32;
+      color: white;
+    }
+
+    /* Botão de alternância de idioma (EN/PT) */
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      background: white;
+      border: 2px solid #2e7d32;
+      color: #2e7d32;
+      padding: 8px 14px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .lang-toggle:hover {
+      background: #2e7d32;
+      color: white;
+    }
+
+    /* Título grande de cada projeto */
+    .page-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+
+    /* Títulos (h2 e h3) em tamanhos diferenciados */
+    h2 {
+      font-size: 1.5rem;
+      color: #2e7d32;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #388e3c;
+    }
+
+    /* Rodapé menor, com colunas e linha vertical */
+    footer {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.6rem; /* fonte menor no rodapé */
+      background-color: #c8e6c9;
+      color: #2e7d32;
+      margin-top: 30px;
+      padding: 10px;
+      text-align: center;
+    }
+    .footer-groups {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-group {
+      padding: 0 10px;
+    }
+    .footer-group + .footer-group {
+      border-left: 2px solid #2e7d32; /* linha vertical separadora */
+    }
+    .footer-group h3 {
+      margin: 0.5em 0 0.3em;
+      color: #2e7d32;
+    }
+    .footer-group ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1.4;
+    }
+    .footer-group li {
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Título (navbar) com suporte a EN/PT -->
+    <h1
+      class="lang"
+      data-en="🌿 Sustainability Journey"
+      data-pt="🌿 Jornada da Sustentabilidade"
+    >
+      🌿 Sustainability Journey
+    </h1>
+    <nav>
+      <button
+        onclick="showProject('project1')"
+        class="lang"
+        data-en="Project 1: Tech Resources"
+        data-pt="Projeto 1: Recursos Tecnológicos"
+      >
+        Project 1: Tech Resources
+      </button>
+      <button
+        onclick="showProject('project2')"
+        class="lang"
+        data-en="Project 2: SDG 9"
+        data-pt="Projeto 2: ODS 9"
+      >
+        Project 2: SDG 9
+      </button>
+      <button
+        onclick="showProject('project3')"
+        class="lang"
+        data-en="Project 3: Sustainable Tech"
+        data-pt="Projeto 3: Tecnologia Sustentável"
+      >
+        Project 3: Sustainable Tech
+      </button>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">EN / PT</button>
+  </header>
+
+  <main>
+    <!-- ============================= -->
+    <!--          PROJETO 1          -->
+    <!-- ============================= -->
+    <section id="project1" class="project-section">
+      <div
+        class="page-title lang"
+        data-en="Project 1: Tech Resources"
+        data-pt="Projeto 1: Recursos Tecnológicos"
+      >
+        Project 1: Tech Resources
+      </div>
+
+      <!-- Introdução Projeto 1 -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Technological Resources for Sustainability Management"
+            data-pt="Recursos Tecnológicos para a Gestão da Sustentabilidade"
+          >
+            Technological Resources for Sustainability Management
+          </h2>
+          <p
+            class="lang"
+            data-en="This presentation explores various technological resources available for sustainability management, focusing on software applications that assist organizations in monitoring and improving their environmental performance."
+            data-pt="Esta apresentação explora vários recursos tecnológicos disponíveis para a gestão da sustentabilidade, com foco em aplicativos de software que auxiliam as organizações a monitorar e melhorar seu desempenho ambiental."
+          >
+            This presentation explores various technological resources...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- Data Collection Tools -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Data Collection Tools"
+            data-pt="Ferramentas de Coleta de Dados"
+          >
+            Data Collection Tools
+          </h2>
+          <p
+            class="lang"
+            data-en="Data collection tools are essential for sustainability management as they facilitate the gathering and analysis of data related to greenhouse gas emissions, waste production, and energy consumption..."
+            data-pt="Ferramentas de coleta de dados são essenciais para a gestão da sustentabilidade, pois facilitam a coleta e análise de dados relacionados a emissões de gases de efeito estufa, produção de resíduos e consumo de energia..."
+          >
+            Data collection tools are essential...
+          </p>
+        </div>
+      </div>
+
+      <!-- Performance Tracking -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Performance Tracking Software"
+            data-pt="Software de Rastreamento de Desempenho"
+          >
+            Performance Tracking Software
+          </h2>
+          <p
+            class="lang"
+            data-en="Performance tracking software enables organizations to monitor their ESG performance in real-time. Implementing solutions like Qlik allows for advanced data visualization and analysis..."
+            data-pt="Software de rastreamento de desempenho permite que as organizações monitorem seu desempenho ESG em tempo real. A adoção de soluções como o Qlik possibilita visualização e análise avançadas de dados..."
+          >
+            Performance tracking software enables organizations...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- Environmental Impact Solutions -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Environmental Impact Solutions"
+            data-pt="Soluções de Impacto Ambiental"
+          >
+            Environmental Impact Solutions
+          </h2>
+          <p
+            class="lang"
+            data-en="Environmental impact solutions are critical for organizations aiming to reduce their carbon footprint and manage their overall sustainability practices..."
+            data-pt="Soluções de impacto ambiental são fundamentais para organizações que buscam reduzir sua pegada de carbono e gerenciar suas práticas de sustentabilidade de forma abrangente..."
+          >
+            Environmental impact solutions are critical...
+          </p>
+        </div>
+      </div>
+
+      <!-- Key Software -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Key Software"
+            data-pt="Software Principal"
+          >
+            Key Software
+          </h2>
+          <h3
+            class="lang"
+            data-en="Qlik for ESG Analysis"
+            data-pt="Qlik para Análise ESG"
+          >
+            Qlik for ESG Analysis
+          </h3>
+          <p
+            class="lang"
+            data-en="Qlik is a powerful Business Intelligence tool designed for data analysis and visualization tailored to ESG performance..."
+            data-pt="O Qlik é uma ferramenta de Inteligência de Negócios poderosa para análise e visualização de dados voltados para o desempenho ESG..."
+          >
+            Qlik is a powerful Business Intelligence tool...
+          </p>
+
+          <h3
+            class="lang"
+            data-en="SAP Sustainability Control Tower"
+            data-pt="SAP Sustainability Control Tower"
+          >
+            SAP Sustainability Control Tower
+          </h3>
+          <p
+            class="lang"
+            data-en="SAP Sustainability Control Tower provides a comprehensive solution for organizations to monitor and optimize their sustainability efforts..."
+            data-pt="O SAP Sustainability Control Tower oferece uma solução abrangente para que as organizações monitorem e otimizem seus esforços de sustentabilidade..."
+          >
+            SAP Sustainability Control Tower provides...
+          </p>
+
+          <h3
+            class="lang"
+            data-en="SAP Sustainability Footprint Management"
+            data-pt="SAP Sustainability Footprint Management"
+          >
+            SAP Sustainability Footprint Management
+          </h3>
+          <p
+            class="lang"
+            data-en="SAP Sustainability Footprint Management focuses on helping organizations manage their environmental footprint with an emphasis on carbon emissions..."
+            data-pt="O SAP Sustainability Footprint Management foca em ajudar as organizações a gerenciar seu impacto ambiental com ênfase nas emissões de carbono..."
+          >
+            SAP Sustainability Footprint Management focuses...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- Conclusões Projeto 1 -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Conclusions"
+            data-pt="Conclusões"
+          >
+            Conclusions
+          </h2>
+          <p
+            class="lang"
+            data-en="In summary, utilizing technological resources such as data collection tools and performance tracking software is essential for effective sustainability management..."
+            data-pt="Em resumo, o uso de recursos tecnológicos como ferramentas de coleta de dados e software de rastreamento de desempenho é essencial para uma gestão de sustentabilidade eficaz..."
+          >
+            In summary, utilizing technological resources...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!--          PROJETO 2          -->
+    <!-- ============================= -->
+    <section id="project2" class="project-section">
+      <div
+        class="page-title lang"
+        data-en="Project 2: SDG 9"
+        data-pt="Projeto 2: ODS 9"
+      >
+        Project 2: SDG 9
+      </div>
+
+      <!-- Texto integral do PDF, em PT/EN -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="ODS 9: Industry, Innovation and Infrastructure for a Sustainable Future"
+            data-pt="ODS 9: Indústria, Inovação e Infraestrutura para um Futuro Sustentável"
+          >
+            ODS 9: Indústria, Inovação e Infraestrutura para um Futuro Sustentável
+          </h2>
+          <p
+            class="lang"
+            data-en="In this presentation, we explore the challenges and opportunities of SDG 9, essential for global economic and technological growth. SDG 9 aims to build resilient infrastructures, promote inclusive and sustainable industrialization, and foster innovation. Get ready for a journey of discoveries and insights on how we can build a better future for everyone."
+            data-pt="Nesta apresentação, exploramos os desafios e oportunidades do ODS 9, que é essencial para o crescimento econômico e tecnológico global. O ODS 9 visa construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação. Prepare-se para uma jornada de descobertas e insights sobre como podemos construir um futuro melhor para todos."
+          >
+            Nesta apresentação, exploramos os desafios e oportunidades do ODS 9...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image: sdg9-1.png]</div>
+      </div>
+
+      <!-- ... (Seguir com todos os blocos do PDF sem cortes) -->
+      <!-- O que é a ODS 9? (Com bullet points) -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image: sdg9-2.png]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="What is ODS 9?"
+            data-pt="O que é a ODS 9?"
+          >
+            O que é a ODS 9?
+          </h2>
+          <p
+            class="lang"
+            data-en="SDG 9 aims to build resilient infrastructures, promote inclusive and sustainable industrialization, and foster innovation..."
+            data-pt="O ODS 9 visa construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação..."
+          >
+            O ODS 9 visa construir infraestruturas resilientes...
+          </p>
+          <ul>
+            <li class="lang" data-en="Resilient Infrastructure" data-pt="Infraestrutura Resiliente">Infraestrutura Resiliente</li>
+            <li class="lang" data-en="Inclusive Industrialization" data-pt="Industrialização Inclusiva">Industrialização Inclusiva</li>
+            <li class="lang" data-en="Fostering Innovation" data-pt="Fomentar a Inovação">Fomentar a Inovação</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Metas do ODS 9 -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Goals of ODS 9"
+            data-pt="Metas do ODS 9"
+          >
+            Metas do ODS 9
+          </h2>
+          <p
+            class="lang"
+            data-en="These goals address from developing quality infrastructure to strengthening scientific research and technology access..."
+            data-pt="Estas metas abordam desde o desenvolvimento de infraestruturas de qualidade até o fortalecimento da pesquisa científica e o acesso à tecnologia..."
+          >
+            Estas metas abordam desde o desenvolvimento de infraestruturas de qualidade...
+          </p>
+          <ul>
+            <li class="lang" data-en="Quality Infrastructure" data-pt="Infraestrutura de Qualidade">Infraestrutura de Qualidade</li>
+            <li class="lang" data-en="Inclusive Industrialization" data-pt="Industrialização Inclusiva">Industrialização Inclusiva</li>
+            <li class="lang" data-en="Access to Financial Services" data-pt="Acesso a Serviços Financeiros">Acesso a Serviços Financeiros</li>
+            <li class="lang" data-en="Sustainable Infrastructure" data-pt="Infraestrutura Sustentável">Infraestrutura Sustentável</li>
+          </ul>
+        </div>
+        <div class="image-placeholder">[Insert image: sdg9-3.png]</div>
+      </div>
+
+      <!-- A Importância da Indústria, Inovação e Infraestrutura -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image: sdg9-4.png]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="The Importance of Industry, Innovation, and Infrastructure"
+            data-pt="A Importância da Indústria, Inovação e Infraestrutura"
+          >
+            A Importância da Indústria, Inovação e Infraestrutura
+          </h2>
+          <p
+            class="lang"
+            data-en="Industry is crucial for economic development, generating jobs and income that contribute to poverty reduction. Proper infrastructures ensure inclusive growth, and innovation creates sustainable solutions for global challenges."
+            data-pt="A indústria é fundamental para o desenvolvimento econômico, gerando empregos e renda que contribuem para a redução da pobreza. Infraestruturas adequadas garantem crescimento inclusivo, e a inovação cria soluções sustentáveis para desafios globais."
+          >
+            A indústria é fundamental para o desenvolvimento econômico...
+          </p>
+        </div>
+      </div>
+
+      <!-- Desafios para o Desenvolvimento da ODS 9 -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Challenges for the Development of ODS 9"
+            data-pt="Desafios para o Desenvolvimento da ODS 9"
+          >
+            Desafios para o Desenvolvimento da ODS 9
+          </h2>
+          <p
+            class="lang"
+            data-en="The development of ODS 9 faces significant obstacles: deficient infrastructure, limited technology access, lack of investment, and urgent sustainability needs. Overcoming these challenges is vital for a more prosperous future."
+            data-pt="O desenvolvimento da ODS 9 enfrenta obstáculos significativos: infraestrutura deficiente, acesso limitado à tecnologia, falta de investimento e necessidades urgentes de sustentabilidade. Superar esses desafios é vital para um futuro mais próspero."
+          >
+            O desenvolvimento da ODS 9 enfrenta obstáculos significativos...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image: sdg9-5.png]</div>
+      </div>
+
+      <!-- Casos de Sucesso -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image: sdg9-6.png]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Success Stories"
+            data-pt="Casos de Sucesso"
+          >
+            Casos de Sucesso
+          </h2>
+          <p
+            class="lang"
+            data-en="Countries like China and Germany showcase how strategic investments and policies can unlock ODS 9’s potential."
+            data-pt="Países como a China e a Alemanha mostram como investimentos e políticas estratégicas podem liberar o potencial da ODS 9."
+          >
+            Países como a China e a Alemanha mostram como...
+          </p>
+        </div>
+      </div>
+
+      <!-- Papel das Empresas e Sociedade -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="The Role of Businesses and Society"
+            data-pt="O Papel das Empresas e da Sociedade"
+          >
+            O Papel das Empresas e da Sociedade
+          </h2>
+          <p
+            class="lang"
+            data-en="Achieving ODS 9 requires businesses to invest in R&D, society to demand sustainable production, and governments to create policies that foster innovation and resilient infrastructure."
+            data-pt="Alcançar a ODS 9 requer que as empresas invistam em P&D, a sociedade exija produção sustentável e os governos criem políticas que promovam a inovação e a infraestrutura resiliente."
+          >
+            Alcançar a ODS 9 requer que as empresas invistam em P&D...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image: sdg9-7.png]</div>
+      </div>
+
+      <!-- Futuro da ODS 9 -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image: sdg9-8.png]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="The Future of ODS 9"
+            data-pt="O Futuro da ODS 9"
+          >
+            O Futuro da ODS 9
+          </h2>
+          <p
+            class="lang"
+            data-en="Technological trends like IoT and AI will shape a sustainable industry. Circular economy is key for resource efficiency, and global partnerships will boost innovation worldwide."
+            data-pt="Tendências tecnológicas como IoT e IA moldarão uma indústria sustentável. A economia circular é fundamental para a eficiência de recursos, e parcerias globais impulsionarão a inovação em todo o mundo."
+          >
+            Tendências tecnológicas como IoT e IA moldarão...
+          </p>
+        </div>
+      </div>
+
+      <!-- Investimentos em Infraestrutura e Tecnologia -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Investments in Infrastructure and Technology: Focus of ODS 9"
+            data-pt="Investimentos em Infraestrutura e Tecnologia: Foco do ODS 9"
+          >
+            Investimentos em Infraestrutura e Tecnologia: Foco do ODS 9
+          </h2>
+          <p
+            class="lang"
+            data-en="The Institute for Applied Economic Research (Ipea) highlights Brazil’s need for infrastructure and technology investments to meet ODS 9 goals. Despite supportive policies, challenges remain in funding and government coordination."
+            data-pt="O Instituto de Pesquisa Econômica Aplicada (Ipea) destaca a necessidade de investimentos em infraestrutura e tecnologia no Brasil para cumprir as metas da ODS 9. Embora haja políticas de apoio, ainda há desafios em relação a financiamento e coordenação governamental."
+          >
+            O Instituto de Pesquisa Econômica Aplicada (Ipea) destaca...
+          </p>
+          <ul>
+            <li class="lang" data-en="Infrastructure" data-pt="Infraestrutura">1) Infraestrutura</li>
+            <li class="lang" data-en="Economic Inclusion" data-pt="Inclusão Econômica">2) Inclusão Econômica</li>
+            <li class="lang" data-en="Modernization" data-pt="Modernização">3) Modernização</li>
+            <li class="lang" data-en="Scientific Research" data-pt="Pesquisa Científica">4) Pesquisa Científica</li>
+          </ul>
+        </div>
+        <div class="image-placeholder">[Insert image: sdg9-9.png]</div>
+      </div>
+
+      <!-- Conclusão ODS 9 -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image: sdg9-10.png]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Conclusion"
+            data-pt="Conclusão"
+          >
+            Conclusão
+          </h2>
+          <p
+            class="lang"
+            data-en="ODS 9 is key to building a more equitable and sustainable world, where industry, innovation and infrastructure drive progress for all. A joint effort between governments, businesses and society is crucial to advance this ODS and secure a better future for coming generations. Together, we can turn challenges into opportunities and build a more prosperous and equitable world."
+            data-pt="A ODS 9 é fundamental para construir um mundo mais igualitário e sustentável, onde a indústria, a inovação e a infraestrutura impulsionam o progresso para todos. Um esforço conjunto entre governos, empresas e sociedade é crucial para avançar nesta ODS e garantir um futuro melhor para as próximas gerações. Juntos, podemos transformar desafios em oportunidades e construir um mundo mais próspero e equitativo."
+          >
+            A ODS 9 é fundamental para construir um mundo mais igualitário...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!--          PROJETO 3          -->
+    <!-- ============================= -->
+    <section id="project3" class="project-section">
+      <div
+        class="page-title lang"
+        data-en="Project 3: Sustainable Tech"
+        data-pt="Projeto 3: Tecnologia Sustentável"
+      >
+        Project 3: Sustainable Tech
+      </div>
+
+      <!-- Introdução Projeto 3 -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Technology as a Sustainable Resource"
+            data-pt="Tecnologia como Recurso Sustentável"
+          >
+            Technology as a Sustainable Resource
+          </h2>
+          <p
+            class="lang"
+            data-en="Sustainable technology aims to conserve natural resources, promote social and economic development, and ensure quality of life for future generations."
+            data-pt="A tecnologia sustentável visa conservar recursos naturais, promover desenvolvimento social e econômico, e garantir qualidade de vida para as futuras gerações."
+          >
+            Sustainable technology aims to conserve natural resources...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- Introduction -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Introduction"
+            data-pt="Introdução"
+          >
+            Introduction
+          </h2>
+          <p
+            class="lang"
+            data-en="Sustainable technology refers to the set of techniques, methods, and processes that enable the production of goods and services with a lower environmental impact."
+            data-pt="Tecnologia sustentável refere-se ao conjunto de técnicas, métodos e processos que possibilitam a produção de bens e serviços com menor impacto ambiental."
+          >
+            Sustainable technology refers to...
+          </p>
+          <ul>
+            <li
+              class="lang"
+              data-en="Conservation of natural resources"
+              data-pt="Conservação de recursos naturais"
+            >
+              Conservation of natural resources
+            </li>
+            <li
+              class="lang"
+              data-en="Reduction of pollution and waste"
+              data-pt="Redução de poluição e resíduos"
+            >
+              Reduction of pollution and waste
+            </li>
+            <li
+              class="lang"
+              data-en="Energy and economic efficiency"
+              data-pt="Eficiência energética e econômica"
+            >
+              Energy and economic efficiency
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Papel da Tecnologia -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Role of Technology"
+            data-pt="Papel da Tecnologia"
+          >
+            Role of Technology
+          </h2>
+          <ul>
+            <li
+              class="lang"
+              data-en="Replacing non-renewable resources"
+              data-pt="Substituição de recursos não renováveis"
+            >
+              Replacing non-renewable resources
+            </li>
+            <li
+              class="lang"
+              data-en="Increasing device efficiency"
+              data-pt="Aumento da eficiência dos dispositivos"
+            >
+              Increasing device efficiency
+            </li>
+            <li
+              class="lang"
+              data-en="Preventing environmental impacts"
+              data-pt="Prevenir impactos ambientais"
+            >
+              Preventing environmental impacts
+            </li>
+          </ul>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- Daily Life -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Sustainable Technology in Daily Life"
+            data-pt="Tecnologia Sustentável no Dia a Dia"
+          >
+            Sustainable Technology in Daily Life
+          </h2>
+          <ul>
+            <li
+              class="lang"
+              data-en="Use energy-efficient appliances"
+              data-pt="Usar aparelhos energeticamente eficientes"
+            >
+              Use energy-efficient appliances
+            </li>
+            <li
+              class="lang"
+              data-en="Utilize renewable energy sources"
+              data-pt="Utilizar fontes de energia renovável"
+            >
+              Utilize renewable energy sources
+            </li>
+            <li
+              class="lang"
+              data-en="Reduce water consumption with smart systems"
+              data-pt="Reduzir consumo de água com sistemas inteligentes"
+            >
+              Reduce water consumption with smart systems
+            </li>
+            <li
+              class="lang"
+              data-en="Opt for sustainable transportation"
+              data-pt="Optar por transporte sustentável"
+            >
+              Opt for sustainable transportation
+            </li>
+            <li
+              class="lang"
+              data-en="Digitize processes to minimize paper waste"
+              data-pt="Digitalizar processos para minimizar desperdício de papel"
+            >
+              Digitize processes to minimize paper waste
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Circular Economy -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Circular Economy and Sustainability"
+            data-pt="Economia Circular e Sustentabilidade"
+          >
+            Circular Economy and Sustainability
+          </h2>
+          <p
+            class="lang"
+            data-en="The circular economy seeks to reduce waste and reuse materials, making products more durable and sustainable."
+            data-pt="A economia circular busca reduzir o desperdício e reutilizar materiais, tornando os produtos mais duráveis e sustentáveis."
+          >
+            The circular economy seeks to reduce waste...
+          </p>
+          <h3
+            class="lang"
+            data-en="Applied Technologies:"
+            data-pt="Tecnologias Aplicadas:"
+          >
+            Applied Technologies:
+          </h3>
+          <ul>
+            <li
+              class="lang"
+              data-en="Advanced plastic recycling"
+              data-pt="Reciclagem avançada de plásticos"
+            >
+              Advanced plastic recycling
+            </li>
+            <li
+              class="lang"
+              data-en="Biodegradable materials"
+              data-pt="Materiais biodegradáveis"
+            >
+              Biodegradable materials
+            </li>
+            <li
+              class="lang"
+              data-en="Efficient electronic production"
+              data-pt="Produção eletrônica eficiente"
+            >
+              Efficient electronic production
+            </li>
+          </ul>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- IoT -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Internet of Things (IoT) and Sustainability"
+            data-pt="Internet das Coisas (IoT) e Sustentabilidade"
+          >
+            Internet of Things (IoT) and Sustainability
+          </h2>
+          <p
+            class="lang"
+            data-en="The Internet of Things (IoT) connects devices to optimize consumption and reduce waste."
+            data-pt="A Internet das Coisas (IoT) conecta dispositivos para otimizar o consumo e reduzir o desperdício."
+          >
+            The Internet of Things (IoT) connects devices...
+          </p>
+          <ul>
+            <li
+              class="lang"
+              data-en="Water leak detection sensors"
+              data-pt="Sensores de detecção de vazamentos de água"
+            >
+              Water leak detection sensors
+            </li>
+            <li
+              class="lang"
+              data-en="Remote control of lighting and climate"
+              data-pt="Controle remoto de iluminação e climatização"
+            >
+              Remote control of lighting and climate
+            </li>
+            <li
+              class="lang"
+              data-en="Energy efficiency monitoring"
+              data-pt="Monitoramento de eficiência energética"
+            >
+              Energy efficiency monitoring
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SDGs and Technology -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Technology and the Sustainable Development Goals (SDGs)"
+            data-pt="Tecnologia e os Objetivos de Desenvolvimento Sustentável (ODS)"
+          >
+            Technology and the Sustainable Development Goals (SDGs)
+          </h2>
+          <p
+            class="lang"
+            data-en="Technology supports the UN’s SDGs, particularly SDG 9 (Industry, Innovation, Infrastructure) and SDG 17 (Partnerships). It helps tackle sustainable agriculture, waste reduction, and renewable energy challenges."
+            data-pt="A tecnologia apoia os ODS da ONU, principalmente o ODS 9 (Indústria, Inovação, Infraestrutura) e o ODS 17 (Parcerias). Ela ajuda a enfrentar desafios como agricultura sustentável, redução de resíduos e energias renováveis."
+          >
+            Technology supports the UN’s SDGs...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+
+      <!-- The Future of Sustainable Technology -->
+      <div class="step row-right">
+        <div class="image-placeholder">[Insert image]</div>
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="The Future of Sustainable Technology"
+            data-pt="O Futuro da Tecnologia Sustentável"
+          >
+            The Future of Sustainable Technology
+          </h2>
+          <p
+            class="lang"
+            data-en="We face environmental and social challenges. Technological innovation will be essential to building a more sustainable future."
+            data-pt="Enfrentamos desafios ambientais e sociais. A inovação tecnológica será essencial para a construção de um futuro mais sustentável."
+          >
+            We face environmental and social challenges...
+          </p>
+          <ul>
+            <li
+              class="lang"
+              data-en="Encourage the use of sustainable technologies"
+              data-pt="Incentivar o uso de tecnologias sustentáveis"
+            >
+              Encourage the use of sustainable technologies
+            </li>
+            <li
+              class="lang"
+              data-en="Adapt consumption and production habits"
+              data-pt="Adaptar hábitos de consumo e produção"
+            >
+              Adapt consumption and production habits
+            </li>
+            <li
+              class="lang"
+              data-en="Support policies and projects focused on sustainability"
+              data-pt="Apoiar políticas e projetos voltados à sustentabilidade"
+            >
+              Support policies and projects focused on sustainability
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Conclusão Projeto 3 -->
+      <div class="step row-left">
+        <div class="text">
+          <h2
+            class="lang"
+            data-en="Thank You!"
+            data-pt="Obrigado!"
+          >
+            Thank You!
+          </h2>
+          <p
+            class="lang"
+            data-en="Let's use technology responsibly to build a more sustainable and inclusive world."
+            data-pt="Vamos usar a tecnologia de forma responsável para construir um mundo mais sustentável e inclusivo."
+          >
+            Let's use technology responsibly...
+          </p>
+        </div>
+        <div class="image-placeholder">[Insert image]</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= -->
+  <!--             RODAPÉ          -->
+  <!-- ============================= -->
+  <footer>
+    <div class="footer-groups">
+      <!-- Projeto 1 -->
+      <div class="footer-group">
+        <h3
+          class="lang"
+          data-en="Project 1: Tech Resources"
+          data-pt="Projeto 1: Recursos Tecnológicos"
+        >
+          Projeto 1: Recursos Tecnológicos
+        </h3>
+        <ul>
+          <li>Murilo Ciriaco Coelho</li>
+          <li>Giovana Boaventura de Oliveira</li>
+          <li>Guilherme Lima</li>
+          <li>Kaio Takeshi</li>
+          <li>Jhonatan Cyrino</li>
+          <li>Nicolly Ferreira</li>
+          <li>Thiales</li>
+        </ul>
+      </div>
+
+      <!-- Projeto 2 -->
+      <div class="footer-group">
+        <h3
+          class="lang"
+          data-en="Project 2: SDG 9"
+          data-pt="Projeto 2: ODS 9"
+        >
+          Projeto 2: ODS 9
+        </h3>
+        <ul>
+          <li>Victoria</li>
+          <li>Guilherme Santos</li>
+          <li>Emily</li>
+          <li>Amanda</li>
+          <li>José</li>
+        </ul>
+      </div>
+
+      <!-- Projeto 3 -->
+      <div class="footer-group">
+        <h3
+          class="lang"
+          data-en="Project 3: Sustainable Tech"
+          data-pt="Projeto 3: Tecnologia Sustentável"
+        >
+          Projeto 3: Tecnologia Sustentável
+        </h3>
+        <ul>
+          <li>Giulia Martins</li>
+          <li>Leonardo Marques</li>
+        </ul>
+      </div>
+
+      <!-- Criação do Site -->
+      <div class="footer-group">
+        <h3
+          class="lang"
+          data-en="Site & Platform"
+          data-pt="Criação do Site e Plataforma"
+        >
+          Criação do Site e Plataforma
+        </h3>
+        <ul>
+          <li>Douglas Garcia</li>
+          <li>Lucas Rodegher</li>
+          <li>Rafael Bardelli</li>
+          <li>Richard Soares</li>
+          <li>Ronaldo Silva</li>
+          <li>Gabriel Ricardo</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Alternar projetos
+    function showProject(id) {
+      document.querySelectorAll('.project-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+    // Mostrar projeto 1 ao carregar
+    window.onload = () => showProject('project1');
+
+    // Troca de idioma (EN/PT)
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'pt' : 'en';
+      document.querySelectorAll('.lang').forEach(el => {
+        const newText = el.getAttribute('data-' + currentLang);
+        if (newText) el.textContent = newText;
+      });
+    }
+  </script>
+</body>
+</html>
