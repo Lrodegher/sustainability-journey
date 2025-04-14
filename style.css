@@ -34,6 +34,20 @@ body {
     color: white;
   }
   
+  #project1 {
+    margin-top: 32px;
+  }
+
+  #project2 {
+    margin-top: 32px;
+  }
+
+
+  #project3 {
+    margin-top: 32px;
+  }
+
+
   main {
     padding: 30px;
   }
